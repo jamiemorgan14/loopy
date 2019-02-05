@@ -58,17 +58,23 @@ let people = [{
 // let doubleNums = nums.map(num => num * 2)
 
 //FOR IN
-let me = {
-  name: 'Jamie',
-  age: 28,
-  food: 'mac and cheese'
-}
+// let me = {
+//   name: 'Jamie',
+//   age: 28,
+//   food: 'mac and cheese'
+// }
 
-for (const key in me) {
-  console.log(key + ':', me[key])
-}
+// for (const key in me) {
+//   console.log(key + ':', me[key])
+// }
 
 
+let template = ''
+people.forEach(person => {
+  template += `<li>${person.name} likes ${person.food}</li>`
+})
+
+document.getElementById('staff').innerHTML = template;
 
 
 
